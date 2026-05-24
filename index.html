@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>CSE160 Painting Assignment</title>
+	<style>
+		:root {
+			color-scheme: dark;
+			--bg1: #0f172a;
+			--bg2: #111827;
+			--accent: #f59e0b;
+			--accent-hover: #d97706;
+			--text: #f8fafc;
+			--muted: #cbd5e1;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			color: var(--text);
+			background:
+				radial-gradient(circle at top, rgba(245, 158, 11, 0.22), transparent 30%),
+				linear-gradient(135deg, var(--bg1), var(--bg2));
+		}
+
+		.card {
+			width: min(90vw, 560px);
+			padding: 40px 32px;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			border-radius: 24px;
+			background: rgba(15, 23, 42, 0.72);
+			backdrop-filter: blur(12px);
+			box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0 0 12px;
+			font-size: clamp(2rem, 4vw, 3rem);
+			letter-spacing: 0.02em;
+		}
+
+		p {
+			margin: 0 0 28px;
+			color: var(--muted);
+			line-height: 1.5;
+		}
+
+		a.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			min-width: 220px;
+			padding: 14px 22px;
+			border-radius: 999px;
+			text-decoration: none;
+			font-weight: 700;
+			color: #111827;
+			background: linear-gradient(135deg, #fbbf24, var(--accent));
+			box-shadow: 0 12px 30px rgba(245, 158, 11, 0.28);
+			transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+		}
+
+		a.button:hover {
+			transform: translateY(-2px);
+			background: linear-gradient(135deg, #fcd34d, var(--accent-hover));
+			box-shadow: 0 16px 36px rgba(245, 158, 11, 0.36);
+		}
+
+		a.button:focus-visible {
+			outline: 3px solid rgba(251, 191, 36, 0.8);
+			outline-offset: 4px;
+		}
+	</style>
+</head>
+<body>
+	<main class="card">
+		<h1>Virtual World</h1>
+		<a class="button" href="src/ColoredPoints.html">Open Virtual World</a>
+	</main>
+</body>
+</html>
